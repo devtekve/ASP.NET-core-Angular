@@ -9,6 +9,9 @@ import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
+import { VehicleFormComponent } from "./components/vehicle-form/vehicle-form.component";
+import { MakeService } from "./services/make.service";
+import { FeatureService } from "./services/feature.service";
 
 @NgModule({
     declarations: [
@@ -16,19 +19,26 @@ import { CounterComponent } from './components/counter/counter.component';
         NavMenuComponent,
         CounterComponent,
         FetchDataComponent,
-        HomeComponent
+        HomeComponent,
+        VehicleFormComponent
     ],
     imports: [
+        FormsModule,
         CommonModule,
         HttpModule,
         FormsModule,
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
+            { path: 'vehicles/new', component: VehicleFormComponent },
             { path: 'home', component: HomeComponent },
             { path: 'counter', component: CounterComponent },
             { path: 'fetch-data', component: FetchDataComponent },
             { path: '**', redirectTo: 'home' }
         ])
+    ],
+    providers: [
+        MakeService,
+        FeatureService
     ]
 })
 export class AppModuleShared {

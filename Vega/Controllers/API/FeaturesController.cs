@@ -24,10 +24,10 @@ namespace Vega.Controllers.API
 
         // GET: api/Models
         [HttpGet]
-        public IEnumerable<FeatureResource> GetFeatures()
+        public IEnumerable<KeyValuePairResource> GetFeatures()
         {
             var x = _context.Features.ToList();
-            return Mapper.Map<List<Feature>,List<FeatureResource>>(x);
+            return Mapper.Map<List<Feature>,List<KeyValuePairResource>>(x);
         }
     }
 }

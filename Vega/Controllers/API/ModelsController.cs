@@ -21,14 +21,13 @@ namespace Vega.Controllers.API
         {
             _context = context;
         }
-
-
+        
         // GET: api/Models
         [HttpGet]
-        public IEnumerable<ModelResource> GetModels()
+        public IEnumerable<KeyValuePairResource> GetModels()
         {
             var x = _context.Models.ToList();
-            return AutoMapper.Mapper.Map<List<Model>,List<ModelResource>>(x);
+            return AutoMapper.Mapper.Map<List<Model>,List<KeyValuePairResource>>(x);
         }
     }
 }

@@ -10,14 +10,37 @@
     </div>
     <div class="form-group">
         <label for="model">Model</label>
-        <select id="model" class="form-control">
-            <!--<option></option>-->
+        <select id="model" class="form-control">            
             <option *ngFor="let mo of models" value="{{mo.id}}">{{mo.name}}</option>
         </select>
     </div>
+    <p>Is this vehicle registered?</p>
+    <div class="radio">
+        <label>
+            <input type="radio" id="registered" value="true" name="isRegistered"/>yes
+        </label>
+        <label>
+            <input type="radio" id="notregistered" value="false" name="isRegistered"/>No
+        </label>
+    </div>
+    <h2>Features</h2>
     <div *ngFor="let f of features" class="checkbox">
         <label>
             <input type="checkbox" id="feature{{f.id}}" />{{f.name}}
         </label>
     </div>   
+    <h2>Contact</h2>
+    <div class="form-group">
+        <label for="contactName">Name</label>
+        <input id="contactName" type="text" value="" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="contactPhone">Phone</label>
+        <input id="contactPhone" value="" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="contactEmail">Email</label>
+        <input id="contactEmail"type="text" value="" class="form-control" />
+    </div>
+    <button class="btn btn-primary">Save</button>
 </form>

@@ -3,10 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Vega.Core.Models;
 using Vega.Models;
 using Vega.Models.Resources;
 
-namespace Vega.Data.Mapping
+namespace Vega.Mapping
 {
     public class MappingProfile : Profile
     {

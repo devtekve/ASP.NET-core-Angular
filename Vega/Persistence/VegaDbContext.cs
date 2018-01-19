@@ -5,8 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using JetBrains.Annotations;
 using Vega.Models;
+using Vega.Core.Models;
 
-namespace Vega.Data
+namespace Vega.Persistence
 {
     public class VegaDbContext : DbContext
     {

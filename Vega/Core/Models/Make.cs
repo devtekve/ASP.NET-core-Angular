@@ -4,17 +4,21 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Vega.Models
+namespace Vega.Core.Models
 {
-    public class Model
+    public class Make 
     {
+        public Make()
+        {
+            Models = new HashSet<Model>();
+        }
+
         public int Id { get; set; }
         [Required]
         [StringLength(255)]
         public string Name { get; set; }
 
-        public Make Make { get; set; }
-        public int MakeId { get; set; }
-
+        public ICollection<Model> Models { get; set; }
+        
     }
 }

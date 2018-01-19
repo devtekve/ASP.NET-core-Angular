@@ -4,10 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Vega.Data;
+using Vega.Persistence;
 using Vega.Models;
 using Microsoft.EntityFrameworkCore;
 using Vega.Models.Resources;
+using Vega.Core.Models;
 
 namespace Vega.Controllers.API
 {

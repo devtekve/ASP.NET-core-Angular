@@ -4,7 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Vega.Data;
+using Vega.Core.Models;
+using Vega.Persistence;
 using Vega.Models;
 using Vega.Models.Resources;
 
